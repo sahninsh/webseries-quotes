@@ -1,6 +1,6 @@
 var array = require("./data/data.json");
 
-var quotes = {};
+// var quotes = {};
 
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -8,11 +8,10 @@ function randomInt(min, max) {
 
 
 module.exports.getQuote = function (name) {
-  var index = randomInt(0, 437);
+  var index = randomInt(0, array.length-1);
+  // console.log(array[index])
+  // quotes.Quote = array[index].Quote;
+  // quotes.Author = array[index].Author;
   
-  quotes.Quote = array[index].Quote;
-  quotes.Author = array[index].Author;
-  
-  
-  return quotes;
+  return array[index] ;
 };
